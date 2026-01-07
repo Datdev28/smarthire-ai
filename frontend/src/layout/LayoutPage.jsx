@@ -1,12 +1,19 @@
-import React from 'react'
 import NavbarHeader from '../components/navbar/NavbarHeader'
+import { Outlet } from 'react-router-dom'
+
 const LayoutPage = () => {
   return (
-    <div className='mx-auto w-full'>
-      <div className='w-full whitespace-nowrap bg-white fixed z-50'>
-        <NavbarHeader/>
-      </div>
-    </div>
+    <>
+      {/* HEADER toàn site */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
+        <NavbarHeader />
+      </header>
+
+      {/* MAIN CONTENT */}
+      <main className="pt-16 min-h-screen bg-slate-50">
+        <Outlet />
+      </main>
+    </>
   )
 }
 
