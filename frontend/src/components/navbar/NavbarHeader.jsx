@@ -42,7 +42,7 @@ const NavbarHeader = () => {
               />
               <IoIosArrowDropdownCircle className="absolute bottom-0 right-0"/>
               <div className="absolute top-10 right-0 w-full h-4"></div>
-              <div className="bg-gray-100 group-hover:opacity-100 group-hover:visible visible duration-100 flex transition-all opacity-100 absolute flex-col top-14 shadow-md right-0 w-sm rounded-xl z-100 text-gray-700">
+              <div className="bg-gray-100 group-hover:opacity-100 group-hover:visible invisible duration-100 flex transition-all opacity-0 absolute flex-col top-14 shadow-md right-0 w-sm rounded-xl z-100 text-gray-700">
                 <DropdownAccount />
               </div>
             </div>
