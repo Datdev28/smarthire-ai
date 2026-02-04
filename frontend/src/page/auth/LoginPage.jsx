@@ -7,6 +7,7 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const LoginPage = () => {
   const [passwordView, setPasswordView] = useState(false);
   const {
@@ -27,7 +28,14 @@ const LoginPage = () => {
           Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý
           tưởng
         </p>
-        <p className="mt-6">Bạn chưa có tài khoản? <span className="text-red-600 cursor-pointer underline">Đăng ký tại đây</span></p>
+        <p className="mt-6">
+          Bạn chưa có tài khoản?
+          <Link to="/register">
+            <span className="text-red-600 cursor-pointer underline ml-1">
+              Đăng ký tại đây
+            </span>
+          </Link>
+        </p>
         <form onSubmit={handleSubmit(onSubmit)} className="w-lg">
           {/* Email */}
           <div className="flex flex-col  mt-6 text-gray-600">
@@ -52,7 +60,7 @@ const LoginPage = () => {
 
           {/* Password */}
           <div className="flex flex-col mt-6 ">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Mật khẩu</label>
             <div className="flex items-center border border-gray-300 rounded-xs focus-within:border-gray-500">
               <div className="p-2">
                 <RiLockPasswordFill className="text-2xl text-green-600" />
