@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Routes>
-      <Route element={<LayoutPage />}>
+      <Route path="/" element={<LayoutPage />}>
       </Route>
       <Route path="/login" element={<LoginPage />} />
     </Routes>
